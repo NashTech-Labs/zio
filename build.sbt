@@ -7,6 +7,4 @@ lazy val root = (project in file("."))
     name := "Wrap-Side-Effects-As-Pure-Values-Using-IO-Monad"
   )
 
-libraryDependencies ++= Seq(
-  "org.typelevel" %% "cats-effect" % "2.5.3"
-)
+libraryDependencies += "org.typelevel" %% "cats-effect" % "2.5.3"

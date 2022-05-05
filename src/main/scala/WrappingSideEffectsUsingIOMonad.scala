@@ -5,6 +5,7 @@ import scala.util.{Random, Try}
 object WrappingSideEffectsUsingIOMonad extends App {
 
   def putStrLn(message: String): IO[Unit] = IO {
+    // wrapping side-effect inside IO Monad
     println(message)
   }
 
@@ -16,9 +17,9 @@ object WrappingSideEffectsUsingIOMonad extends App {
     Random.nextInt(upper)
   }
 
-  def parseNumber(str: String): Option[Int] = Try(str.toInt).toOption
+  def parseNumber(str: String): Option[Int] = Try(str.toInt).toOption // this converts our partial function to total function
 
-  def checkContinue(name: String): IO[Boolean] = for {
+  def checkContinue(name: String): IO[Boolean] = for {  // Using for-comprehension to compose two or more IO Monads guarantees sequential evaluation.
     _ <- putStrLn(s"Do you want to continue $name?")
     input <- getStrLn
     cont <- input.toLowerCase() match {
@@ -49,5 +50,6 @@ object WrappingSideEffectsUsingIOMonad extends App {
     _ <- gameLoop(name)
   } yield ()
 
+  // running the side-effects wrapped inside IO
   myGameLogic.unsafeRunSync()
 }
