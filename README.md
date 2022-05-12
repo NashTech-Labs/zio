@@ -11,7 +11,7 @@
 
 - 👨‍💻 All of our projects are available at [https://techhub.knoldus.com/dashboard/projects/zio](https://techhub.knoldus.com/dashboard/projects/zio)
 
-- 📝 We regularly write articles on [blog.knoldus.com](blog.knoldus.com)
+- 📝 We regularly write articles on [https://blog.knoldus.com](https://blog.knoldus.com)
 
 - 💬 Ask us about **scala, zio, akka, monads, functional programming**
 
