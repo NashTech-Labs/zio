@@ -9,7 +9,7 @@
 
 - 👯 We are looking to collaborate on **ZIO**
 
-- 👨‍💻 All of our projects are available at [https://techhub.knoldus.com/dashboard/projects/zio](techhub.knoldus.com)
+- 👨‍💻 All of our projects are available at [https://techhub.knoldus.com/dashboard/projects/zio](https://techhub.knoldus.com/dashboard/projects/zio)
 
 - 📝 We regularly write articles on [blog.knoldus.com](blog.knoldus.com)
 
