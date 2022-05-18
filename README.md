@@ -1,46 +1,31 @@
-<h1 align="center">Hi 👋, We are Knoldus Zio Experimenting Team</h1>
-<h3 align="center">The passionate developer's from Knoldus exploring ZIO and providing curated templates for learning and development</h3>
+# Composing Effects with ZIO
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=knoldus&label=Profile%20views&color=0e75b6&style=flat" alt="knoldus" /> </p>
+- This template shows how we can compose multiple effects sequentially in ZIO using some easy to understand examples.
+- There are several ways by which we can compose and chain out effects together in ZIO.
+- In this template, we've used some of the most common ones which are ```flatMap```, ```for comprehension```, ```foreach```, ```collectAll``` and the ```zipping``` functions.
 
-- 🔭 We are currently working on **ZIO**
+Let's quickly understand about each of these combinators:
 
-- 🌱 We are currently learning **ZIO**
+**flatMap**: The ```flatMap``` method of ZIO composes two effects in sequence. It requires that you pass a callback, which will receive the value of the first effect, and can return a second effect that depends on this value. 
 
-- 👯 We are looking to collaborate on **ZIO**
+**for comprehension**: As the ```ZIO``` data type supports both flatMap and map, we can use Scala's ```for comprehensions``` to build sequential effects. Using for comprehensions, each line in the
+comprehension looks similar to a statement in procedural programming.
 
-- 👨‍💻 All of our projects are available at [https://techhub.knoldus.com/dashboard/projects/zio](https://techhub.knoldus.com/dashboard/projects/zio)
+**foreach**: The ```foreach``` operator returns a single effect that describes performing an effect for each element of a collection in sequence. It’s similar to a for loop in procedural
+programming, which iterates over values, processes them in some fashion, and collects the results.
 
-- 📝 We regularly write articles on [https://blog.knoldus.com](https://blog.knoldus.com)
+**collectAll**: The ```collectAll``` operator returns a single effect that collects the results of a whole collection of effects.
 
-- 💬 Ask us about **scala, zio, akka, monads, functional programming**
+**zip**: The ```zip``` operator sequentially combines two effects into a single effect. The resulting effect succeeds with a tuple that contains the success values of both effects.
 
-- 📫 How to reach us **piyush@Knoldus.com**
+**zipLeft**: The ```zipLeft``` operator sequentially combines two effects, returning the result of the first effect.
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://twitter.com/knolspeak" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="knolspeak" height="30" width="40" /></a>
-<a href="https://linkedin.com/in/knoldus" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="knoldus" height="30" width="40" /></a>
-</p>
+**zipRight**: The ```zipRight``` operator sequentially combines two effects, returning the result of the second effect.
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="40" height="40"/> </a> <a href="https://www.scala-lang.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/scala/scala-original.svg" alt="scala" width="40" height="40"/> </a> <a href="https://zio.dev/" target="_blank" rel="noreferrer"> <img src="https://storage.googleapis.com/knoldus-images/Techhub%20website/zio.png" alt="zio" width="40" height="40"/> </a> <a href="https://techhub.knoldus.com/" target="_blank" rel="noreferrer"> <img src="https://storage.googleapis.com/knoldus-images/Techhub%20website/techhub.png" alt="techhub" width="100" height="40"/> </a></p>
+**zipWith**: The ```zipWith``` operator combines two effects sequentially, merging their two results with the specified user-defined function.
 
-<h3 align="left">Work</h3>
+In this template, we have added examples for each of these operators. Try executing them and check out the results.
+# Prerequisites
 
-<h4 align="left">Monads</h4>
-
-- 🔭 Techhub link
-
-- 🌱 Techhub link
-
-- 👯 Techhub link
-
-<h4 align="left">Zio Basics</h4>
-- 👨‍💻 Techhub link Or blogs
-
-- 📝 Techhub link Or blogs
-
-<h4 align="left">CheatSheet Zio</h4>
-
-- WIP stay tuned!!!
+- SBT, version 1.6.2
+- Scala, version 2.13.8
