@@ -5,13 +5,47 @@
 
 <h2>ZIO Cheat Sheet</h2>
 
- - This is based on ZIO 1.0.0.
+- This is based on ZIO 1.0.0.
+
+<h3>The ZIO Datatype</h3>
+The `ZIO[R, E, A]` is a core data type around the ZIO library. It acts as a basic building block for every ZIO based
+application.
+
+<h3>Type Parameters</h3>
+The `ZIO[R, E, A]` data type has three type parameters:
+
+- R — the environment/dependency of our effect
+- E — the type of errors that our effect may throw
+- A — the return type of our effect
 
 <h3>Aliases</h3>
+ZIO provide some type aliases which you can use instead of the full ZIO type signature:
+
+| **Alias**    | **Full Type Signature**    |
+|--------------|----------------------------|
+| `UIO[A]`     | `ZIO[Any, Nothing, A]`     |
+| `URIO[R, A]` | `ZIO[R, Nothing, A]`       |
+| `Task[A]`    | `ZIO[Any, Throwable, A]`   |
+| `RIO[R, A]`  | `ZIO[R, Throwable, A]`     |
+| `IO[E, A]`   | `ZIO[Any, E, A]`           |
+
+<h3>Create Effects</h3>
 - WIP
 
-<h3>Effects</h3>
-- WIP
+<h3>Compose Effects Sequentially</h3>
+The ZIO library provides different operators to compose zio effects sequentially:
+
+| **Operator**        | **Description**                                                                                                                              |
+|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| `flatMap`           | composes two effects in sequence                                                                                                             |
+| `for comprehension` | composes two or more effects in sequence                                                                                                     |
+| `foreach`           | returns a single effect that describes performing an effect for each element of a collection in sequence                                     |
+| `collectAll`        | returns a single effect that collects the results of a whole collection of effects                                                           |
+| `zip`               | sequentially combines two effects into a single effect, resulting effect succeeds with a tuple containing the success values of both effects |
+| `zipLeft`           | sequentially combines two effects, returning the result of the first effect                                                                  |
+| `zipRight`          | sequentially combines two effects, returning the result of the second effect                                                                 |
+| `zipWith`           | combines two effects sequentially, merging their two results with the specified user-defined function                                        |
+
 
 <h3 align="left">Connect with us:</h3>
 <p align="left">
