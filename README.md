@@ -8,11 +8,11 @@
 - This is based on ZIO 1.0.0.
 
 <h3>The ZIO Datatype</h3>
-The **ZIO[R, E, A]** is a core data type around the ZIO library. It acts as a basic building block for every ZIO based
+The ZIO[R, E, A] is a core data type around the ZIO library. It acts as a basic building block for every ZIO based
 application.
 
 <h3>Type Parameters</h3>
-The **ZIO[R, E, A]** data type has three type parameters:
+The ZIO[R, E, A] data type has three type parameters:
 
 - R - the environment/dependency of our effect
 - E - the type of errors that our effect may throw
