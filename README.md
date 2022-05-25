@@ -48,6 +48,8 @@
 - [How to Compose Layers in Zio](https://blog.knoldus.com/how-to-compose-layers-in-zio/) by Akash Kumar
 - [ZIO Schedule: How to Repeat and Retry Effects?](https://blog.knoldus.com/how-to-repeat-and-retry-effects-using-zio-schedule/) by Raghav Goyal
 
+We are working on more such articles. Stay Tuned!!
+
 <h4 align="left">Learning Templates</h3>
 
 <h5 align="left">Monads</h4>
@@ -61,6 +63,7 @@
 - [Resource Handling in ZIO](https://techhub.knoldus.com/dashboard/projects/zio/627c1c2e00c21f9b6723c98e) by Raghav Goyal
 - [ZIO-Pulsar Example](https://techhub.knoldus.com/dashboard/projects/zio/627c1e3600c21f9b6723c990) by Prabhat Kashyap
 
+We are working on more templates. Stay Tuned!!
 
 <h4 align="left">CheatSheet Zio</h4>
 
