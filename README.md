@@ -31,11 +31,13 @@
 <h4 align="left">Articles</h3>
 
 <h5 align="left">Monads</h4>
+
 - [All you need to know about Referential Transparency](https://blog.knoldus.com/all-you-need-to-know-about-referential-transparency/) by Niket Mittal
 - [Monad - Introductory approach using Scala](https://blog.knoldus.com/monad-introductory-approach-using-scala/) by Shivam Saxena
 - [Basic understanding of Monads, Monoids, and Functor](https://blog.knoldus.com/basic-understanding-of-monads-monoids-and-functor/) by Gulshan Singh 
 
-<h5 align="left">ZIO</h4>
+<h5 align="left">ZIO Basics</h4>
+
 - [ZIO: The Most Important Data Type Of ZIO Library](https://blog.knoldus.com/zio-the-most-important-data-type-of-zio-library/) by Prateek Gupta
 - [How to run effects in Zio](https://blog.knoldus.com/how-to-run-effects-in-zio/) by Akash Kumar
 - [Sequential Composition in Scala Zio](https://blog.knoldus.com/sequential-composition-in-scala-zio/) by Shivam Saxena
@@ -46,13 +48,15 @@
 - [How to Compose Layers in Zio](https://blog.knoldus.com/how-to-compose-layers-in-zio/) by Akash Kumar
 - [ZIO Schedule: How to Repeat and Retry Effects?](https://blog.knoldus.com/how-to-repeat-and-retry-effects-using-zio-schedule/) by Raghav Goyal
 
-<h4 align="left">Templates</h3>
+<h4 align="left">Learning Templates</h3>
 
 <h5 align="left">Monads</h4>
+
 - [Combining monads: the example of Cats and ZIO](https://techhub.knoldus.com/dashboard/projects/zio/627bf73d00c21f9b6723c98c) by Laurie-Anne Parant
 - [Wrap side-effects as pure values using IO monad](https://techhub.knoldus.com/dashboard/projects/zio/627bf97600c21f9b6723c98d) by Prateek Gupta
 
-<h5 align="left">ZIO</h4>
+<h5 align="left">ZIO Basics</h4>
+
 - [ZIO basics and ZLayer composition](https://techhub.knoldus.com/dashboard/projects/zio/627c1d7600c21f9b6723c98f) by Meenakshi Goyal
 - [Resource Handling in ZIO](https://techhub.knoldus.com/dashboard/projects/zio/627c1c2e00c21f9b6723c98e) by Raghav Goyal
 - [ZIO-Pulsar Example](https://techhub.knoldus.com/dashboard/projects/zio/627c1e3600c21f9b6723c990) by Prabhat Kashyap
