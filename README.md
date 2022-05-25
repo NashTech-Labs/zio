@@ -50,6 +50,9 @@
 
 We are working on more such articles. Stay Tuned!!
 
+For More such blogs do visit - [ZIO BLOGS](https://blog.knoldus.com/technology/zio/)
+
+
 <h4 align="left">Learning Templates</h3>
 
 <h5 align="left">Monads</h4>
@@ -65,6 +68,8 @@ We are working on more such articles. Stay Tuned!!
 
 We are working on more templates. Stay Tuned!!
 
+For More such template do visit - [ZIO TEMPLATES](https://techhub.knoldus.com/dashboard/projects/zio/)
+
 <h4 align="left">CheatSheet Zio</h4>
 
-- WIP stay tuned!!!
+- https://github.com/knoldus/zio/blob/cheatsheet/README.md
