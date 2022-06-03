@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ScalaCompilerConfiguration">
+    <profile name="sbt 1" modules="Composing-Effects-with-ZIO,zio-test-example,zio_7306" />
+  </component>
+</project>
