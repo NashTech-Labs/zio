@@ -65,6 +65,7 @@ For More such blogs do visit - [ZIO BLOGS](https://blog.knoldus.com/technology/z
 - [ZIO basics and ZLayer composition](https://techhub.knoldus.com/dashboard/projects/zio/627c1d7600c21f9b6723c98f) by Meenakshi Goyal
 - [Resource Handling in ZIO](https://techhub.knoldus.com/dashboard/projects/zio/627c1c2e00c21f9b6723c98e) by Raghav Goyal
 - [ZIO-Pulsar Example](https://techhub.knoldus.com/dashboard/projects/zio/627c1e3600c21f9b6723c990) by Prabhat Kashyap
+- [Exception Handling in ZIO](https://techhub.go1percent.com/dashboard/projects/zio/629a4219681a5c893ce85862) by Pallav Gupta
 
 We are working on more templates. Stay Tuned!!
 
