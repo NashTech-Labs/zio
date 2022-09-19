@@ -9,6 +9,7 @@ import zio.{RIO, URIO, ZIO}
 import org.knoldus.edu.domain.api._
 import org.knoldus.edu.domain.errors.DecodeError
 
+
 object TripApi {
    val RootPath = "trip"
 
@@ -21,7 +22,7 @@ object TripApi {
        httpResponseHandler[TripService,APIResponse[String]](
        for{
            body <- req.body.asString
-           trip <- ZIO.fromEither(api.parseTripRequest(body))
+           trip <- ZIO.fromEither(body.fromJson[Trip].left.map(e => DecodeError(e)))
            apiResponse <- TripService.createTrip(trip)
          } yield apiResponse ,apiResponse => convertToHttpResponse[String](apiResponse)( m => Response(status = Status.Created,body = Body.fromString(m) ))
        )
@@ -45,7 +46,7 @@ object TripApi {
        for{
             tripId <- ZIO.fromOption(req.url.queryParams.get("tripId").flatMap(_.headOption)).orElseFail(DecodeError("Invalid query parameter"))
             body <- req.body.asString
-            tripTodUpdate <- ZIO.fromEither(api.parseTripRequest(body))
+            tripTodUpdate <- ZIO.fromEither(body.fromJson[Trip].left.map(e => DecodeError(e)))
             apiResponse <- TripService.update(tripId,tripTodUpdate)
        } yield apiResponse, apiResponse => convertToHttpResponse[Unit](apiResponse)(_ => Response.ok)
    )

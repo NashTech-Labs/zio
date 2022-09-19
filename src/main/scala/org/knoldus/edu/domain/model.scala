@@ -35,7 +35,7 @@ object api{
   implicit val decoderTrip: JsonDecoder[Trip] = DeriveJsonDecoder.gen[Trip]
   implicit val encodeTrip: JsonEncoder[Trip] = DeriveJsonEncoder.gen[Trip]
   implicit val errorMessageEncoder: JsonEncoder[ErrorMessage] = DeriveJsonEncoder.gen[ErrorMessage]
-  def parseTripRequest(msg: String) : Either[DecodeError,Trip] = msg.fromJson[Trip].left.map(e => DecodeError(e))
+
 }
 
 
