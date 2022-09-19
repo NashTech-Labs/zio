@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "86180787-fbf4-4202-84e9-f21cc12250f0",
+		"name": "ZIO-Http-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23307955"
+	},
+	"item": [
+		{
+			"name": "Create Trip",
+			"request": {
+				"method": "POST",
+				"header": [],
+
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve Trip",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9080/trip/retrieve?tripId=oXRvg",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9080",
+					"path": [
+						"trip",
+						"retrieve"
+					],
+					"query": [
+						{
+							"key": "tripId",
+							"value": "oXRvg"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Trip",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9080/trip/remove?tripId=3939",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9080",
+					"path": [
+						"trip",
+						"remove"
+					],
+					"query": [
+						{
+							"key": "tripId",
+							"value": "3939"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retreve All Trips",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9080/trip/retrieveAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9080",
+					"path": [
+						"trip",
+						"retrieveAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update  Trip",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " { \n     \"price\": 50.00,\n     \"name\" : \"testQueue\",\n     \"completed\" : false\n \n }\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9080/trip/updateTrip?tripId=DKRGU",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9080",
+					"path": [
+						"trip",
+						"updateTrip"
+					],
+					"query": [
+						{
+							"key": "tripId",
+							"value": "DKRGU"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

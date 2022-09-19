@@ -18,8 +18,7 @@ class InMemoryTripRepo(db: scala.collection.mutable.HashMap[String, Trip]) exten
     ZIO.succeed(db.values.toList)
 
   override def insert(trip: Trip): Task[String] = ZIO.succeed{
-    val tripId = Random.alphanumeric.take(5).foldLeft("")((result, c) => result + c)
-    println(tripId)
+    val tripId = Random.alphanumeric.take(5).foldLeft("")((result, c) => result + c).toUpperCase
     db.put(tripId, trip.copy(id = Some(tripId)))
     tripId
   }

@@ -9,7 +9,7 @@ sealed abstract class Vehicle extends EnumEntry
 
 case class TripNotFoundException(message: String) extends Exception(message)
 
-case class Trip(id: Option[String] = None, name: String,price: Double,completed: Boolean,distance: Option[Double],endDate: Option[LocalDate])
+case class Trip(id: Option[String] = None, mode: String,price: Double,completed: Boolean,distance: Option[Double],endDate: Option[LocalDate])
 
 final case class ErrorMessage(code: String, description: String)
 
@@ -30,6 +30,8 @@ object errors {
 object api{
   import errors.DecodeError
   val EMPTY_STRING = ""
+  implicit val decoderVehicle: JsonDecoder[Vehicle] = DeriveJsonDecoder.gen[Vehicle]
+  implicit val encodeVehicle: JsonEncoder[Vehicle] = DeriveJsonEncoder.gen[Vehicle]
   implicit val decoderTrip: JsonDecoder[Trip] = DeriveJsonDecoder.gen[Trip]
   implicit val encodeTrip: JsonEncoder[Trip] = DeriveJsonEncoder.gen[Trip]
   implicit val errorMessageEncoder: JsonEncoder[ErrorMessage] = DeriveJsonEncoder.gen[ErrorMessage]
