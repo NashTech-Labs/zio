@@ -6,7 +6,7 @@ import zio.{IO, Task, ULayer, ZIO, ZLayer}
 import scala.collection.mutable.HashMap
 import scala.util.Random
 
-class InMemoryTripRepo(db: scala.collection.mutable.HashMap[String, Trip]) extends TripRepo {
+case class InMemoryTripRepo(db: scala.collection.mutable.HashMap[String, Trip]) extends TripRepo {
 
   override def select(id: String): IO[TripNotFoundException,Trip] = {
     db.get(id) match {
@@ -46,5 +46,5 @@ class InMemoryTripRepo(db: scala.collection.mutable.HashMap[String, Trip]) exten
 }
 
 object InMemoryTripRepo{
-    lazy val live: ULayer[InMemoryTripRepo] = ZLayer.succeed(new InMemoryTripRepo(HashMap[String, Trip]().empty))
+    lazy val live: ULayer[InMemoryTripRepo] = ZLayer.succeed(InMemoryTripRepo(HashMap[String, Trip]().empty))
 }
